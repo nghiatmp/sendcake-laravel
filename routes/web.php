@@ -22,6 +22,8 @@ Route::get('sanpham/{id}','PagesController@getSanPham');
 Route::get('themgiohang/{id}','PagesController@getAddtocart');
 Route::get('muahang/{id}','PagesController@getMuaHang');
 Route::get('cartshop','PagesController@getCartshop');
+Route::get('editcartshop/{id}/{qty}','PagesController@getEditCartshop');
+
 Route::get('xoacartshop/{id}','PagesController@getXoaCartshop');
 Route::get('dathang','PagesController@getDatHang');
 Route::post('save','PagesController@getSave');

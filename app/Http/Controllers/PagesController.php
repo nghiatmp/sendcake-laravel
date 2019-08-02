@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Slide;
 use App\Product;
@@ -72,14 +71,25 @@ class PagesController extends Controller
         $sanpham =Product::find($id);
         Cart::add(['id'=>$id,'name'=>$sanpham->name,'quantity'=>1,'price'=>$sanpham->unit_price,'attributes'=>['img'=>$sanpham->image]]);
         $content =  Cart::getcontent();
-        //print_r($content);
         return redirect('cartshop');
     }
     public function getCartshop(){
         $content = Cart::getcontent();
         $total = Cart::getTotal();
         return view('pages.cartshop',['content'=>$content,'total'=>$total]);
-        return redirect('trangchu');
+       // return redirect('trangchu');
+    }
+    public function getEditCartshop(){
+         if(Request::ajax()){
+           // echo "oke";
+             $id = Request::get('id');
+            //$id = $_GET['id'] ?? '';
+             $qty = Request::get('qty');
+            //$qty = $_GET['qty'] ?? '';
+
+            
+             Cart::update($id,['quantity'=>$qty]);
+         }
     }
     public function getXoaCartshop($id){
         Cart::remove($id);
