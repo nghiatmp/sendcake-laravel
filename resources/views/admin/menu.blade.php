@@ -34,17 +34,26 @@
 					</ul>
 				</li>
 				<li class="limother " >
-			  		<a href="" title="">Hóa Đơn</a>
+			  		<a href="admin/hoadon/hoadonlist" title="">Hóa Đơn</a>
+			  		{{-- <ul class="second">
+						<li><a href="" title="">Danh sách</a></li>
+					</ul> --}}
+				</li>
+				<li class="limother " >
+			  		<a href="admin/thongke/thongke" title="">Thống Kê</a>
 			  		<ul class="second">
-						<li><a href="admin/hoadon/hoadonlist" title="">Danh sách</a></li>
+						<li><a href="admin/thongke/thongke" title="">Hóa Đơn Năm</a></li>
+						<li><a href="admin/thongke/thongkesp" title="">Sản Phẩm Năm</a></li>
+						<li><a href="admin/thongke/thongkeloaibanh" title="">Loại Bánh</a></li>
+						<li><a href="admin/thongke/thongketienthang" title="">Tổng Tiền</a></li>
 					</ul>
 				</li>
-				<li class="limother">
+				{{-- <li class="limother">
 			  		<a href="" title="">Khách Hàng</a>
 			  		<ul class="second">
 						<li><a href="" title="">Thông Tin</a></li>
 					</ul>
-				</li>
+				</li> --}}
 			</ul>
 			</div>
 		</div>

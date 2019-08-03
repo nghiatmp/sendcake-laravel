@@ -22,11 +22,11 @@ class PagesController extends Controller
 		
 	// }
     public function __construct(){
-         if(Session('cart')){
-            $oldCart = Session::get('cart');
-            $cart = new Cart($oldCart);
-            view::share(['cart'=>Session::get('cart'),'productcart'=>$cart->items,'totalPrice'=>$cart->$totalPrice,'totalQty'=>$cart->$totalQty]);
-         }
+         // if(Session('cart')){
+         //    $oldCart = Session::get('cart');
+         //    $cart = new Cart($oldCart);
+         //    view::share(['cart'=>Session::get('cart'),'productcart'=>$cart->items,'totalPrice'=>$cart->$totalPrice,'totalQty'=>$cart->$totalQty]);
+         // }
 
         $loaisanpham = ProductType::all();
         view::share(['loaisanpham'=>$loaisanpham]);

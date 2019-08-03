@@ -104,6 +104,13 @@ Route::group(['prefix'=>'admin','middleware'=>'adminlog'],function(){
 	});
 	//list
 	Route::get('user/list','UserController@getList');
+	//thong ke
+	Route::group(['prefix'=>'thongke'],function(){
+		Route::get('thongke','ThongKeController@getthongke');
+		Route::get('thongkesp','ThongKeController@getthongkesp');
+		Route::get('thongkeloaibanh','ThongKeController@getthongkeloaibanh');
+		Route::get('thongketienthang','ThongKeController@getthongketienthang');
+	});
 
 });
 		
@@ -116,9 +123,3 @@ Route::get('admin/logout','UserController@dangxuat');
 
 
 
-
-//route test
-Route::get('test',function(){
-	$mytime = Carbon\Carbon::now()->subYears(10);
-	 echo $mytime->toDateTimeString();
-});

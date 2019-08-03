@@ -44,7 +44,11 @@
                             @endforeach
                         </tbody>
                     </table>
+
                  </div>
+                  <div  class="col-sm-12 mt-20" style="text-align: center">
+                        {{$hoadon->links()}}
+                    </div>
                  
             </div>
         </div>

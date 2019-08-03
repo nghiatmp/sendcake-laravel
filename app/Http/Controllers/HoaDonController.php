@@ -10,7 +10,7 @@ use App\BillDetail;
 class HoaDonController extends Controller
 {
     public function getHoaDon(){
-    	$hoadon = Bill::all();
+    	$hoadon = Bill::orderBy('id','asc')->paginate(5);
     	return view('adminlayout.hoadon.hoadon',['hoadon'=>$hoadon]);
     }
     public function getChiTietHoaDon($id){
